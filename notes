@@ -1,0 +1,34 @@
+list ports open
+lsof -i :8082
+Kills the port based on pid
+kill -9 11234
+
+
+builds the docker image
+sudo docker build -t node_test:1.0.0 .
+shows the built images
+sudo docker images
+-p maps the ports 8082 to 3000
+sudo docker run -p 3000:8082 node_test:1.0.0
+sudo systemctl stop mysql
+
+
+
+to delete a mysql database
+Login
+mysql -u root -p
+shows the DATABASE
+SHOW DATABASES;
+removes the database
+DROP DATABASE my_database;
+sudo systemctl stop mysql
+
+
+
+
+loggin to a docker container
+
+shows contains and their id that running
+sudo docker ps
+logs in via id
+sudo docker exec -it c96ec6e4334e /bin/bash

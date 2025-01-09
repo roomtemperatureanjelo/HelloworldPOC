@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mysql-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Test1234
+    volumes:
+      - mysql-data:/var/lib/mysql:rw
+      
+    ports:
+      - "3306:3306"
+    networks:
+      - mynetwork
+
+  node-app:
+    build: .
+    depends_on:
+      - mysql-db
+    networks:
+      - mynetwork
+    ports:
+      - "8082:8082"
+    environment:
+      MYSQL_HOST: mysql-db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Test1234
+      MYSQL_DATABASE: HelloWorldPOC
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    # You can leave this empty to create an anonymous volume, or you can specify a path on your host if you need to persist data
