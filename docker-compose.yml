@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: Test1234
     volumes:
       - mysql-data:/var/lib/mysql:rw
-      
+
     ports:
       - "3306:3306"
     networks:
@@ -32,4 +32,3 @@ networks:
 
 volumes:
   mysql-data:
-    # You can leave this empty to create an anonymous volume, or you can specify a path on your host if you need to persist data
