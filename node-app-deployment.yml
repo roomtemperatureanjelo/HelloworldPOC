@@ -14,11 +14,7 @@ spec:
     spec:
       containers:
       - name: node-app
-<<<<<<< HEAD
         image: alexlopesacr.azurecr.io/node-app:latest
-=======
-        image: <acr-name>.azurecr.io/node-app:latest
->>>>>>> a8d4098b4f96edfd95f8b85420bd453792fe869c
         ports:
         - containerPort: 8082
         env:
