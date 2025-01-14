@@ -25,18 +25,13 @@ jobs:
           docker build -t alexlopesacr.azurecr.io/node-app:latest .
           docker push alexlopesacr.azurecr.io/node-app:latest
 
-- name: Install Azure CLI
-  run: |
-    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-- name: Log in to Azure CLI
-  run: |
-    az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
-
-- name: Get AKS credentials
-  run: |
-    az aks get-credentials --resource-group Rg_nodejs --name aks-cluster
-
+      - name: Log in to Azure CLI
+        run: |
+          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 
       - name: Get AKS credentials
         run: |
