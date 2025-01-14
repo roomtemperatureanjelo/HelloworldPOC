@@ -26,7 +26,7 @@ jobs:
           docker push alexlopesacr.azurecr.io/node-app:latest
 
       - name: Set up Azure CLI
-        uses: azure/azure-cli-action@v1  # Corrected action
+        uses: azure/azure-cli-action@v1.0.0
 
       - name: Get AKS credentials
         run: |
