@@ -46,4 +46,75 @@ git push origin main
 
 azure stuff
 az group create --name Rg_nodejs --location japanwest
+<<<<<<< HEAD
 Root [ / ]# az acr create --resource-group Rg_nodejs --name alexlopesacr --sku Basic
+=======
+oot [ / ]# az acr create --resource-group Rg_nodejs --name alexlopesacr --sku Basic
+Resource provider 'Microsoft.ContainerRegistry' used by this operation is not registered. We are registering for you.
+Registration succeeded.
+{
+  "adminUserEnabled": false,
+  "anonymousPullEnabled": false,
+  "creationDate": "2025-01-11T03:58:44.334335+00:00",
+  "dataEndpointEnabled": false,
+  "dataEndpointHostNames": [],
+  "encryption": {
+    "keyVaultProperties": null,
+    "status": "disabled"
+  },
+  "id": "/subscriptions/55250548-0940-48b7-8b85-ff47e70395f7/resourceGroups/Rg_nodejs/providers/Microsoft.ContainerRegistry/registries/alexlopesacr",
+  "identity": null,
+  "location": "japanwest",
+  "loginServer": "alexlopesacr.azurecr.io",
+  "metadataSearch": "Disabled",
+  "name": "alexlopesacr",
+  "networkRuleBypassOptions": "AzureServices",
+  "networkRuleSet": null,
+  "policies": {
+    "azureAdAuthenticationAsArmPolicy": {
+      "status": "enabled"
+    },
+    "exportPolicy": {
+      "status": "enabled"
+    },
+    "quarantinePolicy": {
+      "status": "disabled"
+    },
+    "retentionPolicy": {
+      "days": 7,
+      "lastUpdatedTime": "2025-01-11T03:58:53.634872+00:00",
+      "status": "disabled"
+    },
+    "softDeletePolicy": {
+      "lastUpdatedTime": "2025-01-11T03:58:53.634922+00:00",
+      "retentionDays": 7,
+      "status": "disabled"
+    },
+    "trustPolicy": {
+      "status": "disabled",
+      "type": "Notary"
+    }
+  },
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "Rg_nodejs",
+  "sku": {
+    "name": "Basic",
+    "tier": "Basic"
+  },
+  "status": null,
+  "systemData": {
+    "createdAt": "2025-01-11T03:58:44.334335+00:00",
+    "createdBy": "foxhound1486@gmail.com",
+    "createdByType": "User",
+    "lastModifiedAt": "2025-01-11T03:58:44.334335+00:00",
+    "lastModifiedBy": "foxhound1486@gmail.com",
+    "lastModifiedByType": "User"
+  },
+  "tags": {},
+  "type": "Microsoft.ContainerRegistry/registries",
+  "zoneRedundancy": "Disabled"
+}
+root [ / ]#
+>>>>>>> a8d4098b4f96edfd95f8b85420bd453792fe869c
