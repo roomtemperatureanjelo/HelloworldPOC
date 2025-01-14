@@ -26,3 +26,5 @@ spec:
           value: "Test1234"
         - name: MYSQL_DATABASE
           value: "HelloWorldPOC"
+      imagePullSecrets:
+      - name: acr-secret
