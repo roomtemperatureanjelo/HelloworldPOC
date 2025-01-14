@@ -39,7 +39,7 @@ jobs:
 
       - name: Deploy to AKS
         run: |
-          kubectl apply -f kubernetes/mysql-deployment.yml
-          kubectl apply -f kubernetes/mysql-service.yml
-          kubectl apply -f kubernetes/node-app-deployment.yml
-          kubectl apply -f kubernetes/node-app-service.yml
+          kubectl apply -f mysql-deployment.yml
+          kubectl apply -f mysql-service.yml
+          kubectl apply -f node-app-deployment.yml
+          kubectl apply -f node-app-service.yml
